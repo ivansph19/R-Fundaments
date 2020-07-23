@@ -1,0 +1,12 @@
+---
+title: "DataFrames"
+author: "IvansPH"
+date: "22/7/2020"
+output: pdf_document
+---
+
+```{r}
+df = read.csv("../Data/players_15.csv")
+df
+```
+
