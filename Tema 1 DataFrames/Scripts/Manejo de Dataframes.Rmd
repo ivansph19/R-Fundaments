@@ -4,9 +4,34 @@ author: "IvansPH"
 date: "22/7/2020"
 output: pdf_document
 ---
+Carga de dataset en formato CSV
 
 ```{r}
-df = read.csv("../Data/players_15.csv")
-df
+df = read.csv("../Data/players_15.csv",
+              header = TRUE
+              )
+library(dplyr)
+df= select(df,3,5,7,8,9,10)
+
 ```
+
+Creando sub-dataframe
+```{r}
+
+df1 = df[df$club=="FC Barcelona", ]
+str(df1)
+
+droplevels(df1)
+
+```
+
+
+Funcion Filter
+```{r}
+dfArgBarc = filter(df, club == "FC Barcelona" & nationality ==  "Argentina") 
+head(dfArgBarc)
+```
+
+
+
 
